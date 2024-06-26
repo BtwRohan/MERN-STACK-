@@ -1,0 +1,83 @@
+let bool=true;
+console.log(bool,typeof bool);  //check boolean value abd its type
+
+let num=458.98;
+console.log(num,typeof num);  //chech num value and its type
+
+let symbol=('hello world');
+console.log(symbol,typeof symbol);  //check string value and its type
+
+let iphone={
+        iphoneXR:{                // object with its attributes
+             price:75000,
+             rating:4.5
+        }
+    }
+console.log(iphone,typeof iphone);   // printing attributes and its type
+
+let arr=[1,2,3,4];   
+console.log(arr,typeof arr) ;      //array and its type
+
+//question 2
+// let a=parseFloat(prompt('first number'));    //take 1st number from user
+// let b=parseFloat(prompt('second number'));   //take 2nd number from user
+// let add=a+b;                     //perform addition operation
+// console.log(add);                //result of add operation
+// let sub=a-b;                     //perform subtraction operation
+// console.log(sub)                  //result of subtration operation
+// let mul=a*b;                     //perform multiplication operation
+// console.log(mul);                 //result of mul operation
+// let div=a/b;                       //perform division oeration
+// console.log(div);                 //result of division operation
+
+// //question 3
+// let num=parseFloat(prompt('enter the number to check:'))    //take number from user tocheck positive,negative,zero
+// if( num<0)                          //condition to check if negative
+//     {
+//         console.log('number is negative');
+//     }
+//     else if(num>0)                 //condition to check if positive
+//         {
+//             console.log('number is positive')
+//         }
+//         else{                      //otherwise state its zero
+//             console.log('its zero');
+//         }
+
+// //question 4
+// for(let i=1;i<=20;i++)      //condition to iterate in the loop
+//     {
+//         if(i%2!==0)           //to print only the even numbers
+//             {
+//                 continue;      //controlflow keyword to skip the current state
+//             }
+//             console.log(i)          //print even numbers
+//     }
+
+// //question 5
+// let numeric = parseFloat(prompt('Enter a grade between 0-100:'));  //taken marks or value from user to stste the grade of student
+
+// if (numeric >= 90 && numeric <= 100)        //stated the condition with logical and for grade a
+//     {
+//         console.log('Grade A');
+//     }
+//     else if (numeric >= 80 && numeric < 90)   //stated the condition with logical and for grade a
+//         {
+//             console.log('Grade B');
+//         }
+//     else if (numeric >= 70 && numeric < 80)     //stated the condition with logical and for grade b
+//          {
+//     console.log('Grade C');
+//          }
+//     else if (numeric >= 60 && numeric < 70)     //stated the condition with logical and for grade c
+//          {
+//     console.log('Grade D');
+//          }
+//     else if (numeric >= 0 && numeric < 60)       //stated the condition with logical and for grade d
+//          {
+//     console.log('Grade F');    
+//           }                
+//     else {                                  //if user enters other than this values then to show error message
+//          
+//     console.log('Invalid grade');
+//     }
