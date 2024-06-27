@@ -1,0 +1,79 @@
+//Question 1
+    // let n = ''                //initiliaze an empty string
+    // for (let i = 1; i <= 10; i++)   //outer loop to iterate over rows
+    //     {
+    //         let row = ''
+    //         for (let j = 1; j <= 10; j++)    //inner loop iterate over column
+    //             {
+    //                 row += (i * j).toString().padStart(4, ' ')   //convert the product to string and pad it with width of 4
+    //             }
+    //          n += row + '\n'            //add new row of next table
+    //     }
+    // console.log(n)        //print the entire table
+
+//question 2
+// let arr=[1,2,3,4,5]         //created array of 5 numbers
+// let sum=0                    //initialize their sum to 0
+// for(let i=0;i<arr.length;i++)   //loop to iterate until the length of array
+//     {
+//         sum+=arr[i]
+//     }
+//     console.log(sum)         //print the total sum of array
+
+//question 3
+// function isPalindrome(str) 
+// {
+//   let reversed = '';    //line to split,reverse and again join the string
+// for (let i=str.length-1;i>=0;i--)     //loop to compare the characters
+//{
+//   reversed+=str[i]
+//  }
+//   return str === reversed;                      // check for palidrome
+// }
+// console.log(isPalindrome('LEVEL'));          //taken example of level
+
+//question 4
+// function generateFibonacci(n)
+//  {
+//     let fibSequence = [0, 1];                  //initilization of series
+//     for (let i = 2; i < n; i++)               // loop to generate the numbers
+//          {               
+//       fibSequence.push(fibSequence[i - 1] + fibSequence[i - 2]);    //to calculate the next fibonacci number
+//     }
+//     return fibSequence.slice(0, n);             //rturns the sequence
+//   }
+//   console.log(generateFibonacci(10));           //example for fibonacci numbers
+
+//question 5
+function scopeDemo()    //created a function
+{
+    if (true)         //block created
+         {
+        var varVariable = ' var variable';  //var variable declared
+        console.log(varVariable);
+        let letVariable = ' let variable';    //let variable declared
+        console.log(letVariable); 
+        const constVariable = 'const variable';    //const variable declared
+        console.log(constVariable);  
+    }
+    console.log('Outside block:');       // accescing the variables outside the block we have created above
+    console.log(varVariable); 
+    try                                 //block to check error
+    {
+        console.log(letVariable); 
+    } 
+    catch (e)                 //block to prevent the exception over error if occured
+    {
+        console.log('letVariable is not accessible outside the block'); 
+    }
+    try 
+    {
+        console.log(constVariable); 
+    } 
+    catch (e)
+     {
+        console.log('constVariable is not accessible outside the block');
+    }
+}
+scopeDemo();               //called the function to execute all the block and variables created
+
