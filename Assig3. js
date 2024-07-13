@@ -1,0 +1,75 @@
+//question 1
+// function capitalletter(arr){         //created a function and argumrent is pased
+//     return arr.map(str=>{                //aarrow function returns strimg
+//         return str.charAt(0).toUpperCase()+str.slice(1)    //return a string with first letter capital
+//     })
+// }
+// let stringArray=['hospital','office','company','college','school','cafe']   //passe a string
+// console.log(capitalletter(stringArray))                        //printed a output excepted
+
+//question 2
+// function slarge(arr){                               //created a function and argumrent is pased
+//     if(arr.length<2){                              //condition to state the true or false 
+//         throw new error('it is not an array');
+//     }
+//     let first=-Infinity,second=-Infinity          //number in array will be greater than this values
+//     arr.forEach(element => {                     //loop to iterate over an array
+//         if(element>first){
+//             second=first;
+//             first=element
+//         }
+//         else if(element>second&& element<first){     //condition if number is greater than second and less than first
+//             second=element
+//         }
+        
+//     });
+//     return second
+// }
+// let arr=[90,70,100,600,900,65,40]
+// console.log(slarge(arr))
+
+// question 3
+// function keyvalue(arr,key){                //function with arguments of arr and key
+//     return arr.map(obj=>obj[key])          //map method to extract the value of specified key
+// }
+// let obj2=[{                     //creation of objects
+//     name:'rohan',
+//     roll:10,
+//     age:19
+// },
+// {
+//     name:'vivek',
+//     roll:20,
+//     age:18
+// },
+// {
+//     name:'yug',
+//     roll:30,
+//     age:17
+// }]
+// let key='roll'                   //given the key as roll and the object value or key value is printed
+// console.log(keyvalue(obj2,key))
+
+//question 4
+// function fact(num){                    //created a function and argumrent is pased
+//     if (num==0|| num==1)               //if the num is 0 or 1 then it returns 1
+//         return 1
+//     let result=1;                      //initilization
+//     for (let i=2;i<=num;i++){          //for loop from 2 to num
+//         result*=i                      //calculate by multiplyingresult by each i
+//     }
+//     return result
+// }
+// function factarr(arr){                   
+//     return  arr.map(n=>fact(n))         //map method to create a factorial fubction to each element of array given
+// }
+// const arrynum=[1,2,3,4]
+// console.log(factarr(arrynum))
+
+//question 5
+function intract(arr1,arr2){                   
+    return arr1.filter(value=>arr2.includes(value))  //filter function creates an new arry containing the elements of arr1 and include function includes the valus of arr2 in new array with the arrow function
+}
+const arr1=[1,2,3,4]
+const arr2=[3,4,5,6]
+console.log(intract(arr1,arr2))          
