@@ -1,0 +1,97 @@
+//Q1: Write a function that returns a closure which adds a specific number to its argument.
+
+function Add(number) {
+    return function(arg){                   // The closure takes an argument and adds the specified number to it
+        return arg+number
+    }
+}
+
+console.log(Add(5)(5))
+
+
+
+//Q2: Create a function using closure to keep track of how many times it has been called.
+
+function ClosureCounter() {
+    let counter = 0                             // Counter variable to keep track of the number of calls
+    return function (){                     // The closure increments the counter and returns its value
+        counter++
+        return counter
+    }
+}
+
+const count = ClosureCounter()
+console.log(count())
+console.log(count())
+
+
+//Q3: Implement a prototype method to calculate the area of a rectangle object.
+
+function Rectangle(l,b){
+    this.l = l
+    this.b = b
+}
+
+Rectangle.prototype.AreaRectangle = function() {
+    return this.l * this.b
+}
+
+const rect = new Rectangle(5,10)
+console.log(rect.AreaRectangle())
+
+//Q4: Write a function to create an object and add methods using prototype to calculate perimeter and area of a circle.
+
+function Circle(radius) {
+    this.radius = radius;
+}
+
+Circle.prototype.areaCircle = function() {                      // Prototype method to calculate the area of the circle
+    return `Area of circle: ${3.14*this.radius*this.radius}`
+}
+
+Circle.prototype.perimeterCircle = function() {             // Prototype method to calculate the perimeter of the circle
+    return `Perimeter of Circle: ${2*3.14*this.radius}`
+}
+
+const result = new Circle(10)
+console.log(result.areaCircle())
+console.log(result.perimeterCircle())
+
+
+/*Q5: Create a function that returns a set of functions that can increment, decrement, reset, and get the value of a private counter.
+Each function should be able to modify or access the private counter, demonstrating a more complex use of closures.*/
+
+function CreateCounter(){
+    let count=0
+    
+    return {            // Object containing closures to manipulate and access the counter
+        
+        increment: function(){
+            count++
+            return count
+        },
+
+        decrement: function(){
+            count--
+            return count
+        },
+
+        getCount: function(){
+            return count
+        },
+    
+        resetCount: function(){
+            count = 0
+            return 'Count Reset'
+        }
+
+    }
+}
+
+const counter = CreateCounter()
+console.log(counter.increment())
+console.log(counter.increment())
+console.log(counter.decrement())
+console.log(counter.getCount())
+console.log(counter.resetCount())
+console.log(counter.getCount())
