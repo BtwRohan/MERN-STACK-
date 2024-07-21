@@ -1,0 +1,53 @@
+// function accept(obj){                     //creation of function
+//     let result=[]                         //empty array to store the outupt as it is in array
+//     for (let key in obj)                  //loop to iterate key in the given obj
+//     {
+//         if (obj.hasOwnProperty(key)){     //check if the given property is inherited or not
+//             result.push([key,obj[key]])   //push the output in the givin form into empty array
+//         }
+//     }
+//     return result                         //return the result with key-value pairs
+// }
+// let person={name:'john',age:30}
+// console.log(accept(person))
+
+// //question 2
+// function cases(str){           //function creation
+//     return str.split(' ')      //to split the string into the words
+//     .map(word =>{              //maping over the words
+//         return word.charAt(0).toUpperCase()+word.slice(1).toLowerCase()//return the word as 1st letter capital and remaning in lower case
+//     })
+// .join(' ')                     //join the words and form a string
+// }
+// let string='hello world'
+// console.log(cases(string))
+
+//question 3
+// function emptyarr(obj){       //function creation
+//     for (let key in obj){        //loop to iterate key in the given obj
+//         if (obj.hasOwnProperty(key)){    //if the object key values then return false
+//             return false
+//         }
+//     }
+//     return true                     //if it does not contain key values
+// }
+// let emptyobj={};
+// let fulledobj={name:'rohan'}
+// console.log(emptyarr(emptyobj))
+// console.log(emptyarr(fulledobj))
+
+
+//question 4
+function count(str){          //function creation
+    let CharCount={}        //empty object to store the count
+    for (let char of str){    //loop to iterate char in the given str
+        if (CharCount[char]){      //if condition when the character is already present then increment the count
+            CharCount[char]++
+        }
+        else{
+            CharCount[char]=1     //character is not repeated then keep the count as one
+        }
+    }
+    return CharCount
+}
+console.log(count('hello world'))
